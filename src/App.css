@@ -73,3 +73,7 @@
 .groceries-list .list-item:nth-child(odd) {
   background: lightcoral;
 }
+
+.shopping-basket h1 {
+  margin-left: 8px;
+}
