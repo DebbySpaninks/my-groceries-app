@@ -1,16 +1,15 @@
 import React from 'react'
 
-function ListItem(item) {
+const ListItem = ({ clickItem, readonly, item }) => {
     return (
-        <div>
-            <li key={item.id}
-                className="list-item"
-                // onClick={clickItem}
-                value={item.title}
-            >
-                {item.title}
-            </li>
-        </div>
+        <li key={item.id}
+            className="list-item"
+            onClick={clickItem}
+            value={item.title}
+        >
+            <span> {item.title || ""}</span>
+            <span>{readonly ? ` ${item.amount}` : ""}</span>
+        </li>
     )
 }
 

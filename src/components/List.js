@@ -3,22 +3,25 @@ import ListItem from './ListItem'
 
 class List extends Component {
     render() {
-        const { items } = this.props
-// if items ? then render through all listItems with .map
-//      const listItems = this.state.groceryItems.map(    nog weghalen!!
+        const { items, readonly, handleClickItem } = this.props
         const listItems = items
             ? items.map(item => (
                 <ListItem
                     key={item.id}
                     item={item}
-                    // title={item.title}
+                    readonly={readonly}
+                    clickItem={handleClickItem}
                 />
             ))
             : ''
+
         return (
-            <div>
-                {listItems}
-            </div>
+            // <> kortere syntax voor React.Fragment
+            <>
+                <ul>
+                    {listItems}
+                </ul>
+            </>
         )
     }
 }

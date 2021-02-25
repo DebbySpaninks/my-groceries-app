@@ -1,11 +1,14 @@
 import React from 'react'
 import List from './List'
+import InputField from './InputField'
 
-function GroceryList({groceryItems, handleClickGroceryItem}) {
+function GroceryList({ groceryItems, handleClickGroceryItem, addGrocery }) {
     return (
-        <div>
-            <List items={groceryItems} handleClickItem={handleClickGroceryItem}/>
-        </div>
+        // <> kortere syntax voor React.Fragment
+        <>
+            <InputField onSubmit={addGrocery} />
+            <List items={groceryItems} handleClickItem={handleClickGroceryItem} />
+        </>
     )
 }
 

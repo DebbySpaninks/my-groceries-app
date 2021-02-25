@@ -1,11 +1,20 @@
 import React from 'react'
 import List from './List'
 
-function ShoppingCart() {
+const ShoppingCart = ({ groceryItems, handleClickEmptyCart }) => {
     return (
-        <div>
-            <List />
-        </div>
+        // <> kortere syntax voor React.Fragment
+        <>
+            <button
+                className="button"
+                onClick={handleClickEmptyCart}>
+                Leeg de winkelmand
+            </button>
+            <List
+                readonly={true}
+                items={groceryItems}
+            />
+        </>
     )
 }
 
