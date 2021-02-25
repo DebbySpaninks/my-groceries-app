@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   padding: 15px;
-  background-color: lightblue;
+  background-color: rgb(76, 173, 206);
   list-style: none;
   margin: 5px;
   color: black;
@@ -18,26 +18,33 @@
   color: black;
   padding: 14px 20px;
   margin: 20px 0;
-  border: none;
+  border: 1px solid rgb(100, 99, 99);
   border-radius: 4px;
   cursor: pointer;
   background-color: lightgray;
   margin-left: 10px;
 }
 .groceries-input input {
+  padding-left: 25px;
+  padding-right: 0;
+  width: 230px;
   background-color: white;
 }
 .groceries-input input {
   border: 1px solid lightgray;
 }
 
-.groceries-list {
+.groceries-list,
+.shopping-basket {
   width: 50%;
   padding: 20px;
 }
-.groceries-list ul {
+
+.groceries-list ul,
+.shopping-basket ul {
   padding: 0;
 }
+
 .app {
   text-align: center;
 }
@@ -49,21 +56,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 35px;
   color: white;
 }
 
-.basket .list-item {
-  background: lightblue;
+.shopping-basket .list-item {
+  background: rgb(158, 204, 219);
+}
+.shopping-basket .list-item:nth-child(even) {
+  background: rgb(196, 248, 248);
 }
 
-.basket .list-item:nth-child(even) {
-  background: lightcyan;
-}
-
-.groceries .list-item {
+.groceries-list .list-item {
   background: lightpink;
 }
-.groceries .list-item:nth-child(odd) {
+.groceries-list .list-item:nth-child(odd) {
   background: lightcoral;
 }

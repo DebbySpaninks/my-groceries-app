@@ -6,9 +6,9 @@ const ShoppingCart = ({ groceryItems, handleClickEmptyCart }) => {
         // <> kortere syntax voor React.Fragment
         <>
             <button
-                className="button"
+                className="button-primary"
                 onClick={handleClickEmptyCart}>
-                Leeg de winkelmand
+                Winkelmand leegmaken
             </button>
             <List
                 readonly={true}

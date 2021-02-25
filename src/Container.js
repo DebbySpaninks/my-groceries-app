@@ -8,13 +8,11 @@ class Container extends Component {
         this.state = {
             groceryInput: '',
             groceryItems: [
-                { id: 1, title: "melk" },
-                { id: 2, title: "kiwi's" },
-                { id: 3, title: "brood" }
+                { id: 1, title: 'melk' },
+                { id: 2, title: 'fruit' },
+                { id: 3, title: 'brood' }
             ],
-            shoppingListItems: [
-                { id: 1, title: "melk", amount: 2 }
-            ]
+            shoppingListItems: [{ id: 1, title: 'appelmoes', amount: 2 }]
         }
     }
 
